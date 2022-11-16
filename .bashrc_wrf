@@ -1,0 +1,39 @@
+# .bashrc_wrf
+
+source activate daan
+# Set permissions of newly made files to 'all'
+#umask 0000
+
+# User specific environment and startup programs
+module load ctdas2022i
+
+module load intel/2021a
+module load intel-compilers/2021.2.0
+module load impi/2021.2.0-intel-compilers-2021.2.0
+module load iimpi/2021a
+module load UDUNITS/2.2.28-GCCcore-10.3.0
+module load time/1.9-GCCcore-10.3.0
+
+ulimit -s unlimited
+
+export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
+export DIR=/projects/0/ctdas/dkivits/WRF-libs
+export CC=icc
+export CXX=icpc
+export FC=ifort
+export F77=ifort
+export F90=ifort
+
+export HDF5=$DIR
+export LD_LIBRARY_PATH=$DIR/lib:$LD_LIBRARY_PATH
+export PATH=$DIR/bin:/scratch-shared/ivelde/ncview/bin:$PATH
+export NETCDF=$DIR
+export NETCDFF=$DIR
+
+export JASPERLIB='/sw/arch/Centos8/EB_production/2021/software/JasPer/2.0.28-GCCcore-10.3.0/bin'
+export JASPERINC='/sw/arch/Centos8/EB_production/2021/software/JasPer/2.0.28-GCCcore-10.3.0/include/jasper'
+
+export WRF_CHEM=1
+export CPPFLAGS=-I$DIR/include
+export LDFLAGS=-L$DIR/lib
+export LIBS="-lnetcdf -lhdf5_hl -lhdf5 -lz"
