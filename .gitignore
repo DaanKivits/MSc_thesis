@@ -1,0 +1,12 @@
+.cdsapirc
+calc_wavenum.py
+create_settings_file.py
+ctdas_lib.r
+.git
+logs
+mk_cams_bdy_py3.py
+project_parameterfile.r
+__pycache__
+this.job
+WRFDomainLib.py
+timedate_py3.py
