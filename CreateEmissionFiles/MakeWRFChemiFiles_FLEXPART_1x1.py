@@ -13,7 +13,7 @@ import numpy as np
 
 # Check if a regridded flux directory exists, otherwise create it
 dirname = '/projects/0/ctdas/awoude/NRT/ICOS_OUTPUT/'
-outdir = '/projects/0/ctdas/dkivits/DATA/FLEXPART/code/fluxes/CTEHR/2017/'
+outdir = '/projects/0/ctdas/dkivits/DATA/FLEXPART/code/fluxes/CTEHR/upscaled/'
 # dirname = '/mnt/c/Users/daank/OneDrive - WageningenUR/WUR/MSc thesis/Data/CTEHR/'
 # outdir = '/home/dkivits/Footprints/Flexpart/DICE/fluxes/CTE_HR/'
 
@@ -51,21 +51,23 @@ fluxstring = []
 #        dirname + name + '.201807.nc')) + sorted(glob.glob(dirname + name + '.201808.nc')) + sorted(glob.glob(dirname + name + '.201809.nc'))
 
 for name in fluxfilelist:
-    fluxstring += sorted(glob.glob(dirname + name + '.2017*.nc'))
+    fluxstring += sorted(glob.glob(dirname + name + '.2018*.nc'))
+
 
 timelist = np.arange(datetime(int(fluxstring[0][-9:-5]),int(fluxstring[0][-5:-3]),1),datetime(int(fluxstring[-1][-9:-5]),int(fluxstring[-1][-5:-3]),1) + relativedelta(months=+1),timedelta(hours=1)).astype(datetime)
+
 
 # Define CTE-HR grid variables
 lon_bounds = [-14.9, 35.]  # in degrees
 lat_bounds = [33.05, 72.]  # in degrees
-flexbounds_lon = [-14.875, 35.]  # in degrees
-flexbounds_lat = [33.125, 73.]  # in degrees
+flexbounds_lon = [-14.5, 35.]  # in degrees
+flexbounds_lat = [33.5, 73.]  # in degrees
 lon_step = 0.2  # in degrees
 lat_step = 0.1  # in degrees
-flex_lon_step = 0.25  # in degrees
-flex_lat_step = 0.25  # in degrees
-flexlat = flexvar_lat.shape[0]  # gridsize in x dimension (amount of gridcells)
-flexlon = flexvar_lon.shape[0]  # gridsize in y dimension (amount of gridcells)
+flex_lon_step = 1  # in degrees
+flex_lat_step = 1  # in degrees
+flexlat = 39  # gridsize in x dimension (amount of gridcells)
+flexlon = 50  # gridsize in y dimension (amount of gridcells)
 lat_list = np.arange(lat_bounds[0], lat_bounds[1], lat_step)
 lon_list = np.arange(lon_bounds[0], lon_bounds[1], lon_step)
 flexlat_list = np.arange(flexbounds_lat[0], flexbounds_lat[1], flex_lat_step)

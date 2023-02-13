@@ -8,17 +8,18 @@ if [ ! -d $outdir ]; then
   mkdir $outdir
 fi
 
-if [ ! -d backup ]; then
-  mkdir backup
+droughtfolder='/projects/0/ctdas/dkivits/DATA/fluxes/2018'
+fluxdir='/projects/0/ctdas/dkivits/DATA/fluxes/'
+
+if [ ! -d $droughtfolder ]; then
+  mkdir $droughtfolder
 fi
 
-droughtfolder='/projects/0/ctdas/dkivits/DATA/fluxes/2018'
-
 mv "$outdir"/* "$outdir/backup"
-mv "2018"/* "2018/backup"
+mv "$droughtfolder"/* "$droughtfolder/backup"
 
-#years={2017..2022}
-years=2020
+years={2017..2021}
+#years=2020
 
 for month in {7..9}
 do
@@ -33,8 +34,8 @@ do
 	
 done
 
-#for year in {2017..2022}
-for year in $years
+for year in {2017..2021}
+#for year in $years
 do
         if (($year!=2018)) && (($year!=2022))
 	then
@@ -83,5 +84,5 @@ cdo yearmean $outdir/combined.merged.nc $outdir/average.JAS.multiyear.nc
 cdo timmean $outdir/average.JAS.multiyear.nc $outdir/average.JAS.$years.nc
 cdo yearmean $droughtfolder/combined.merged.2018.nc $droughtfolder/average.JAS.2018.nc
 
-cdo sub $droughtfolder/average.JAS.2018.nc $outdir/average.JAS.$years.nc nepfire.dif.JAS.2018_$years.nc
+cdo sub $droughtfolder/average.JAS.2018.nc $outdir/average.JAS.$years.nc $fluxdir/nepfire.dif.JAS.2018_$years.nc
 

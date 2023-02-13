@@ -5,20 +5,22 @@ fluxfolder='/projects/0/ctdas/awoude/NRT/ICOS_OUTPUT'
 echo 'give output directory name: '
 read outdir
 
-if [ ! -d $outdir ]; then
-  mkdir $outdir
+if [ ! -d "$outdir/backup" ]; then
+  mkdir -p "$outdir/backup"
 fi
 
-if [ ! -d backup ]; then
-  mkdir backup
-fi
-
-mv "$outdir"/* "backup"
-
+fluxdir='/projects/0/ctdas/dkivits/DATA/fluxes/'
 droughtfolder='/projects/0/ctdas/dkivits/DATA/fluxes/2018'
 
-years={2017..2022}
-#years=2020
+if [ ! -d "$droughtfolder/backup" ]; then
+  mkdir -p "$droughtfolder"
+fi
+
+mv "$outdir"/* "$outdir/backup"
+mv "$droughtfolder"/* "$droughtfolder/backup"
+
+#years={2017..2021}
+years=2017
 
 for month in {5..10}
 do	
@@ -34,8 +36,8 @@ do
 	fi
 done
 
-for year in {2017..2022}
-#for year in $years
+#for year in {2017..2021}
+for year in $years
 do
 	if (($year!=2018)) && (($year!=2022))
 	then
@@ -72,12 +74,13 @@ do
 		cdo mergetime -cat $outdir/combined.*0$month.nc $outdir/merged.0${month}.nc
 		cdo yearmean $droughtfolder/combined.20180$month.nc $droughtfolder/combined.avg.20180$month.nc
 		cdo timmean -cat $outdir/merged.0$month.nc $outdir/merged.avg.$years.0$month.nc
-		cdo sub $droughtfolder/combined.avg.20180$month.nc $outdir/merged.avg.$years.0$month.nc nepfire.dif.2018_$years.0$month.nc
+		cdo sub $droughtfolder/combined.avg.20180$month.nc $outdir/merged.avg.$years.0$month.nc $fluxdir/nepfire.dif.2018_$years.0$month.nc
 	else
 		cdo mergetime -cat $outdir/combined.*$month.nc $outdir/merged.${month}.nc
 		cdo yearmean $droughtfolder/combined.2018$month.nc $droughtfolder/combined.avg.2018$month.nc
 		cdo timmean -cat $outdir/merged.$month.nc $outdir/merged.avg.$years.$month.nc
-                cdo sub $droughtfolder/combined.avg.2018$month.nc $outdir/merged.avg.$years.$month.nc nepfire.dif.2018_$years.$month.nc
+                cdo sub $droughtfolder/combined.avg.2018$month.nc $outdir/merged.avg.$years.$month.nc $fluxdir/nepfire.dif.2018_$years.$month.nc
 	fi
 done
+
 

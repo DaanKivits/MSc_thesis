@@ -10,3 +10,4 @@ __pycache__
 this.job
 WRFDomainLib.py
 timedate_py3.py
+Plotting/*

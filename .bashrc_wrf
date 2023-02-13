@@ -5,14 +5,14 @@ source activate daan
 #umask 0000
 
 # User specific environment and startup programs
-module load ctdas2022i
 
-module load intel/2021a
-module load intel-compilers/2021.2.0
-module load impi/2021.2.0-intel-compilers-2021.2.0
-module load iimpi/2021a
-module load UDUNITS/2.2.28-GCCcore-10.3.0
-module load time/1.9-GCCcore-10.3.0
+#module load netCDF/4.8.0-gompi-2021a
+#module load intel/2021a
+#module load intel-compilers/2021.2.0
+#module load impi/2021.2.0-intel-compilers-2021.2.0
+#module load iimpi/2021a
+#module load UDUNITS/2.2.28-GCCcore-10.3.0
+#module load time/1.9-GCCcore-10.3.0
 
 ulimit -s unlimited
 

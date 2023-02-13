@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -p thin
-#SBATCH -t 120:00:00
+#SBATCH -t 04:00:00
 #SBATCH -n 1
 #SBATCH -N 1
 #SBATCH --mail-user=daan.kivits@wur.nl
