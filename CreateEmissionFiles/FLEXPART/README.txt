@@ -1,6 +1,6 @@
 # Daan Kivits, 2023
 
-The FLEXPART folder contains the scripts we used to transform the CTE-HR fluxes to the FLEXPART spatial grid. 
+The FLEXPART directory contains the scripts we used to transform the CTE-HR fluxes to the FLEXPART spatial grid. 
 
 Here is a short explanation of the functionality of the scripts included in this directory:
 
@@ -19,6 +19,6 @@ Here is a short explanation of the functionality of the scripts included in this
     creation run remotely.
 
 The directory also contains the 'notebooks' and 'function' sub-directories. The former contains a Jupyter notebook that I used to test the areas 
-that were masked when selecting only CTE-HR gridcells that were classified under a certain PFT / landuse, and the latter contains a Python-based 
+that were masked when selecting only CTE-HR gridcells that were classified under a certain PFT / landuse, and the latter contains a Python 
 function file with functions that were used to extract the landuse data from the CORINE-based SiB4 PFT map and check the area covered by each of 
 the landuse types.

@@ -30,7 +30,7 @@ HOME = os.getenv("HOME")
 #########################
 parser = argparse.ArgumentParser()
 parser.add_argument(dest="settings_file", help="Path to settings file (pickled dictionary)")
-parser.add_argument('--overwrite-ctdas',dest='overwrite_ctdas', help="Overwrite CTDAS run when folder already exists?", default=False)
+parser.add_argument('--overwrite-ctdas',dest='overwrite_ctdas', help="Overwrite CTDAS run when directory already exists?", default=False)
 #if running_as_cluster_job:
 #    parser.add_argument(dest="mem_MB", help="Memory in MB available for job step creation.")
 
@@ -143,7 +143,7 @@ else:
 # Test: retrieve unperturbed truth (scaling factors should be 1)
 #s["obs_pri_truth_pattern"] = s["obs_pri_truth_pattern"].replace("truth5.0", "truth5.3")
 
-# LF: EASIER TO JUST MAKE A DIFFERENT FOLDER WITH ARTIFICIAL OBSERVATIONS, AND SELECT WITH OBS_PATH AND OBS_PATTERN
+# LF: EASIER TO JUST MAKE A DIFFERENT DIRECTORY WITH ARTIFICIAL OBSERVATIONS, AND SELECT WITH OBS_PATH AND OBS_PATTERN
 #if s["atmos_data"] == "artificial":
 #    dasystem_rc.replace("obs.column.ncfile", s["obs_pri_truth_pattern"])
 #elif s["atmos_data"] == "real":

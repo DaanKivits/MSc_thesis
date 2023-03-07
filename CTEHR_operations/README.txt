@@ -1,11 +1,11 @@
 # Daan Kivits, 2023
 
-The 'CTEHR_operations' folder contains scripts that were used to create the temporal average fluxmaps using a multitude of CDO commands and bash scripting for-loops.
+The 'CTEHR_operations' directory contains scripts that were used to create the temporal average fluxmaps using a multitude of CDO commands and bash scripting for-loops.
 Some points of attention:
 - 2022 was not included in most of these analyses, since at the time of writing the scripts the CTE-HR growing season flux data was still incomplete.
 - We used CDO commands here for their ease-of-use. Documentation can be found here: https://code.mpimet.mpg.de/projects/cdo/embedded/cdo_refcard.pdf
     Because the use of CDO commands proved to be very cumbersome when a hierarchical (HDF-like) and grouped file structure is neccessary, 
-    we chose to move to simpler Python-based array and raster transformation operations later down the road.
+    we chose to move to simpler Python array and raster transformation operations later down the road.
 
 Here is a short explanation of the functionality of the scripts included in this directory:
 

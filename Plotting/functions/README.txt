@@ -1,4 +1,4 @@
-# Daan Kivits, 2023
+# Daan Kivits, 2023based
 
-The 'functions' folder contains a Python-based function file with functions that were used to plot the results of our 
-FLEXPART analyses, and a Python-based script that is used by the 'compareWRFoutput_visually.sh' Bash script.
+The 'functions' directory contains a Python function file with functions that were used to plot the results of our 
+FLEXPART analyses, and a Python script that is used by the 'compareWRFoutput_visually.sh' Bash script.

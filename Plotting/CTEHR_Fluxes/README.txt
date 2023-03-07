@@ -1,6 +1,6 @@
 # Daan Kivits, 2023
 
-The 'CTE-HR_Fluxes' folder contains Python-based scripts that were used in to check both the emission flux files provided by Friedemann Reum
+The 'CTEHR_Fluxes' directory contains Python scripts that were used in to check both the emission flux files provided by Friedemann Reum
 (personal communications, 2022) and the CTE-HR fluxes. 
 
 Here is a short explanation of the functionality of the scripts included in this directory:

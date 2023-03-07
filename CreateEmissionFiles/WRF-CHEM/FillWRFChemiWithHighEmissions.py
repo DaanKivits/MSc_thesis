@@ -22,7 +22,7 @@ import shutil
 if not os.path.exists(backupdir):
    shutil.copytree(outdir, backupdir)
 
-# To reset the files to the backup standard, copy backup folder to outdir always
+# To reset the files to the backup standard, copy backup directory to outdir always
 shutil.copytree(backupdir, outdir, dirs_exist_ok=True)
 
 ######################################

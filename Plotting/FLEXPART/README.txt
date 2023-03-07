@@ -1,6 +1,6 @@
 # Daan Kivits, 2023
 
-The 'FLEXPART' folder contains Python-based scripts that were used in the various FLEXPART analyses. All the scripts are therefore
+The 'FLEXPART' directory contains Python scripts that were used in the various FLEXPART analyses. All the scripts are therefore
 used to plot results in the CONCENTRATION space, not the FLUX space.
 
 Here is a short explanation of the functionality of the scripts included in this directory:

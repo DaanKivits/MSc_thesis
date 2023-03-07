@@ -1,6 +1,6 @@
 # Daan Kivits, 2023
 
-The 'WRF_CHEM' folder contains the scripts we used to test the fluxes that were provided by Friedemann Reum (2022, personal communications),
+The 'WRF_CHEM' directory contains the scripts we used to test the fluxes that were provided by Friedemann Reum (2022, personal communications),
 and transform the CTE-HR fluxes to the WRF-CHEM spatial grid. 
 
 Here is a short explanation of the functionality of the scripts included in this directory:
@@ -14,6 +14,6 @@ Here is a short explanation of the functionality of the scripts included in this
     and fills these files with CTE-HR high-resolution fluxes for the biosphere (NEP and wildfires), ocean, and anthropogenic sectors.
     The script therefore does not need any existing WRFChemi emission files as input.
 - SjoerdBarten_examplescript.py: This script was provided by Sjoerd Barten (personal communications, 2022) and serves as a starting point
-    for using the Python-based Basemap package to transform the CTE-HR flux fields, and visualizing the results.
+    for using the Python Basemap package to transform the CTE-HR flux fields, and visualizing the results.
 - submit_CreateWRFChemiFiles.py: This is a script that can be used to submit to the HPC cluster and let the WRF-CHEM emission flux file
     creation run remotely.

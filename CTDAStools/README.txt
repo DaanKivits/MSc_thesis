@@ -1,6 +1,6 @@
 # Daan Kivits, 2023
 
-The 'CTDAS_tools' folder contains additional scripts that can be used for various operations when running simulations using 
+The 'CTDAS_tools' directory contains additional scripts that can be used for various operations when running simulations using 
 the CTDAS shell.
 
 Here is a short explanation of the functionality of the scripts included in this directory:
