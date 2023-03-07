@@ -1,14 +1,11 @@
 #!/bin/bash
 fluxfolder='/projects/0/ctdas/awoude/NRT/ICOS_OUTPUT'
-outfolder_first='/projects/0/ctdas/dkivits/DATA/fluxes'
+outfolder_first='/projects/0/ctdas/dkivits/DATA/Fluxes_CDO/2018'
 droughtfolder=$outfolder_first/"2018"
 
 if [ ! -d $droughfolder ]; then
   mkdir $droughtfolder
 fi
-
-#echo 'give landuse type (CORINE PFT code): '
-#read landuse_type
 
 for landuse_type in {0,1,2,5,8,11,14,17,18}
 do
@@ -24,7 +21,7 @@ do
 		if (($month!=10))
 		then
 			cp $fluxfolder/nep.20180${month}.nc $droughtfolder/nep.20180${month}.nc
-	                cp $fluxfolder/fire.20180${month}.nc $droughtfolder/fire.20180${month}.nc
+			cp $fluxfolder/fire.20180${month}.nc $droughtfolder/fire.20180${month}.nc
 
 			cdo -O add $droughtfolder/nep.20180$month.nc $droughtfolder/fire.20180$month.nc $droughtfolder/combined.20180$month.nc
 			cdo -O add $outdir/nep.20180$month.nc $outdir/fire.20180$month.nc $outdir/combined.20180$month.mixed.nc
@@ -35,7 +32,7 @@ do
 	
 		else
 			cp $fluxfolder/nep.2018${month}.nc $droughtfolder/nep.2018${month}.nc
-	                cp $fluxfolder/fire.2018${month}.nc $droughtfolder/fire.2018${month}.nc
+			cp $fluxfolder/fire.2018${month}.nc $droughtfolder/fire.2018${month}.nc
 
 			cdo -O add $droughtfolder/nep.2018$month.nc $droughtfolder/fire.2018$month.nc $droughtfolder/combined.2018$month.nc
 			cdo -O add $outdir/nep.2018$month.nc $outdir/fire.2018$month.nc $outdir/combined.2018$month.mixed.nc

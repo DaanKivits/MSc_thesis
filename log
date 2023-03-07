@@ -1,0 +1,11 @@
+Warning: Didn't test if subprocess launching works. See docstring of this file.
+CTDAS run directory (/projects/0/ctdas/dkivits/CTDAS_WRF_runs/testrun//ctdas_runs/test_fwd_highres/exec) already exists, files will be overwritten.
+Preparing CTDAS run in /projects/0/ctdas/dkivits/CTDAS_WRF_runs/testrun//ctdas_runs/test_fwd_highres/exec
+/projects/0/ctdas/dkivits/CTDAS_WRF_runs/testrun//ctdas_runs/test_fwd_highres/exec/da/rc/wrfchem/obsoper_wrfchem_test_fwd_highres.rc
+Running WPS and WRF in fwd mode...
+Traceback (most recent call last):
+  File "/gpfs/work1/0/ctdas/dkivits/scripts/run_ctdas_withrunner_cluster.py", line 235, in <module>
+    r.check_returncode()
+  File "/home/rdkok/.conda/envs/daan/lib/python3.9/subprocess.py", line 460, in check_returncode
+    raise CalledProcessError(self.returncode, self.args, self.stdout,
+subprocess.CalledProcessError: Command 'python /projects/0/ctdas/dkivits//scripts/run_wps_wrf_fwd_withrunner.py /projects/0/ctdas/dkivits/CTDAS_WRF_runs/testrun/settings_file_test_fwd_highres.pkl fwd >&run_wps_wrf_fwd_withrunner.test_fwd_highres.log' returned non-zero exit status 1.

@@ -2,6 +2,7 @@
 
 # Purpose: Submit a generic command and its arguments to a job scheduler
 # Author: Friedemann Reum, updated by Liesbeth
+# DK, 2023: Changed original submit_python.exe script to include the submission of the real.exe WRF executable
 
 # Usage message
 function print_usage_and_exit

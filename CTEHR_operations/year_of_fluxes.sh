@@ -1,7 +1,6 @@
 #!/bin/bash
 fluxfolder='/projects/0/ctdas/awoude/NRT/ICOS_OUTPUT'
-
-droughtfolder='/projects/0/ctdas/dkivits/DATA/fluxes/2018'
+droughtfolder='/projects/0/ctdas/dkivits/DATA/Fluxes_CDO/2018/2018'
 
 if [ ! -d $droughtfolder ]; then
   mkdir $droughtfolder

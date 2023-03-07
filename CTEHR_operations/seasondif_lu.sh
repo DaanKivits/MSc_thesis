@@ -1,9 +1,7 @@
 #!/bin/bash
 fluxfolder='/projects/0/ctdas/awoude/NRT/ICOS_OUTPUT'
-outfolder_first='/projects/0/ctdas/dkivits/DATA/fluxes'
+outfolder_first='/projects/0/ctdas/dkivits/DATA/Fluxes_CDO/2018'
 
-#echo 'give landuse type (CORINE PFT code): '
-#read landuse_type
 for landuse_type in {0,1,2,5,8,11,14,17,18}
 do
 
